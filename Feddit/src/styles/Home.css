@@ -1,0 +1,50 @@
+/* Home.css */
+
+/* General layout for the home page */
+.home {
+  display: flex;
+  padding-top: 60px; /* Adjust for header height */
+}
+
+/* Sidebar styling */
+aside {
+  position: fixed;
+  top: 60px; /* Place it below the header */
+  left: 0;
+  width: 250px;
+  height: calc(100vh - 60px); /* Adjust height to exclude the header */
+  background-color: #1a1a1b;
+  padding: 20px;
+  border-radius: 0 8px 8px 0;
+  color: #fff;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar menu items */
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside li {
+  padding: 10px 0;
+  font-size: 16px;
+  color: #d7dadc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+aside li:hover {
+  color: #ffffff;
+}
+
+/* Main content area */
+.content {
+  margin-left: 270px; /* Offset by sidebar width */
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1200px;
+}

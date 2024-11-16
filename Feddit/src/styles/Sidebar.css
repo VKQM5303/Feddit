@@ -1,0 +1,79 @@
+/* General styling for sidebar */
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px;
+  height: calc(100vh - 60px); /* Adjust height based on header */
+  background-color: #1a1a1b;
+  padding: 20px;
+  border-radius: 0 8px 8px 0;
+  color: #fff;
+}
+
+/* Sidebar menu items */
+.sidebar-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #272729; /* Box background */
+  border-radius: 5px;
+  margin: 10px 0;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar-menu li a {
+  text-decoration: none; /* Remove underline */
+  color: #ffffff; /* White text */
+  display: block; /* Make entire box clickable */
+}
+
+.sidebar-menu li:hover {
+  background-color: #3a3a3c;
+}
+
+/* Footer styling */
+.sidebar-footer {
+  margin-top: auto;
+  font-size: 14px;
+  text-align: center;
+}
+
+.policies {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.policies li {
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #272729; /* Box background */
+  border-radius: 5px;
+  margin: 5px 0;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.policies li a {
+  text-decoration: none; /* Remove underline */
+  color: #ffffff; /* White text */
+  display: block; /* Make entire box clickable */
+}
+
+.policies li:hover {
+  background-color: #3a3a3c;
+}
+
+/* Ensure all states for links are styled */
+a, a:visited, a:hover, a:active {
+  color: #ffffff; /* Force white color for links */
+  text-decoration: none; /* Remove underline */
+}

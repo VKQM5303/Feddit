@@ -1,0 +1,44 @@
+/* PostDetails.css */
+
+/* Container for the post details */
+.post-details {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  /* Title of the post */
+  .post-details h2 {
+    font-size: 24px;
+    color: #1a1a1b;
+    margin-bottom: 10px;
+  }
+  
+  /* Main content of the post */
+  .post-details p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  /* Comments section title */
+  .post-details .comments-title {
+    font-size: 18px;
+    color: #0079d3;
+    margin-top: 20px;
+  }
+  
+  /* Individual comment styling */
+  .comment {
+    padding: 10px;
+    background-color: #f3f4f6;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  

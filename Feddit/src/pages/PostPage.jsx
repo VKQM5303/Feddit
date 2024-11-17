@@ -12,6 +12,7 @@ function PostPage({ posts }) {
     { text: 'Thanks for sharing!', votes: 5 },
   ]);
   const [newComment, setNewComment] = useState('');
+  const [showShareURL, setShowShareURL] = useState(false);
 
   const handleAddComment = (e) => {
     e.preventDefault();
@@ -33,6 +34,16 @@ function PostPage({ posts }) {
 
   const handleDownvote = () => {
     setPostVotes(postVotes - 1);
+  };
+
+  const handleShareClick = () => {
+    setShowShareURL(!showShareURL);
+  };
+
+  const handleCopyURL = () => {
+    const postURL = `${window.location.origin}/post/${id}`;
+    navigator.clipboard.writeText(postURL);
+    alert('Post URL copied to clipboard!');
   };
 
   if (!post) return <p>Post not found</p>;
@@ -65,7 +76,19 @@ function PostPage({ posts }) {
             </button>
           </div>
           <button className="comment-icon">💬 {comments.length} Comments</button>
-          <button className="share-icon">🔗 Share</button>
+          <button className="share-icon" onClick={handleShareClick}>
+            🔗 Share
+          </button>
+          {showShareURL && (
+            <div className="share-url">
+              <input
+                type="text"
+                value={`${window.location.origin}/post/${id}`}
+                readOnly
+              />
+              <button onClick={handleCopyURL}>Copy</button>
+            </div>
+          )}
         </div>
       </div>
       <div className="comments-section">
